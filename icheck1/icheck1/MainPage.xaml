@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="icheck1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:icheck1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Icon="Page" Label="New" Click="New_Click"/>
+                <AppBarButton Icon="Add" Label="Add" Click="Add_Click"/>
+                <AppBarButton Icon="Upload" Label="Update" Click="Upd_Click"/>
+                <AppBarButton Icon="Sync" Label="Refresh" Click="Refresh_Click"/>
+
+            </StackPanel>
+        </AppBar>
+        </Page.BottomAppBar>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Pivot Title="iCheck" FontSize="21">
+                <PivotItem Header="Modify">
+                    <Grid>
+                        <TextBox x:Name="textBox1" Margin="50,0,50,451" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" RenderTransformOrigin="-0.465,-0.469"/>
+                        <TextBox x:Name="textBox3" Margin="50,0,50,220" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" RenderTransformOrigin="-0.465,-0.469"/>
+                        <TextBox x:Name="textBox4" Margin="50,0,50,111" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" RenderTransformOrigin="-0.465,-0.469"/>
+                        <TextBlock x:Name="textBlock" Margin="50,29,206,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlock1" Margin="50,140,186,0" TextWrapping="Wrap" Text="Telephone:" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlock2" Margin="50,260,206,0" TextWrapping="Wrap" Text="TouchID:" VerticalAlignment="Top"/>
+                        <TextBox x:Name="textBox2" Margin="50,0,50,340" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" RenderTransformOrigin="-0.465,-0.469"/>
+                        <TextBlock x:Name="textBlock3" Margin="50,369,206,0" TextWrapping="Wrap" Text="Grade:" VerticalAlignment="Top"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem Header="Check"/>
+            </Pivot>
+        </Grid>
+</Page>
